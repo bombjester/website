@@ -4,7 +4,6 @@
 		<title>Eric Lee's Website</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
@@ -13,133 +12,34 @@
 	 	<link rel="stylesheet" type="text/css" href="style.css">
 	 	<link rel="stylesheet" href="materialize.css">
 	 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
-	 	
 	 	<link rel="stylesheet" href="animate.css">
 	 	<link rel="stylesheet" type="text/css" href="simpletextrotator.css">
-	 	<script src="jquery.simple-text-rotator.js"></script> 	
-	 	<script>
-
-
-		$(document).ready(function(){
-			//animation
-				var ctx = document.querySelector("canvas").getContext("2d"),
-			    dashLen = 220, dashOffset = dashLen, speed = 8,
-			    txt = "Drag Me!", x = 30, i = 0;
-
-				ctx.font = "20px Comic Sans MS, cursive, TSCu_Comic, sans-serif"; 
-				ctx.lineWidth = 1; ctx.lineJoin = "round"; ctx.globalAlpha = 3/3;
-				ctx.strokeStyle = ctx.fillStyle = "black";
-
-			(function loop() {
-			  ctx.clearRect(x, 0, 60, 150);
-			  ctx.setLineDash([dashLen - dashOffset, dashOffset - speed]); // create a long dash mask
-			  dashOffset -= speed;                                         // reduce dash length
-			  ctx.strokeText(txt[i], x, 90);                               // stroke letter
-
-			  if (dashOffset > 0) requestAnimationFrame(loop);             // animate
-			  else {
-			    ctx.fillText(txt[i], x, 90);                               // fill final letter
-			    dashOffset = dashLen;                                      // prep next char
-			    x += ctx.measureText(txt[i++]).width + ctx.lineWidth * Math.random();
-			    ctx.setTransform(1, 0, 0, 1, 0, 3 * Math.random());        // random y-delta
-			    ctx.rotate(Math.random() * 0.005);                         // random rotation
-			    if (i < txt.length) requestAnimationFrame(loop);
-			  }
-			})();
-
-			//end animation
-
-			$('.parallax').parallax();
-			$('.button-collapse').sideNav({
-			      menuWidth: 300, // Default is 240
-			      edge: 'left', // Choose the horizontal origin
-			      closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
-			    }
-			);
-
-			$(window).scroll(function() {
-			    if ($(this).scrollTop() > 800) {
-			        $('#left').removeClass("hidden").addClass("animated once rollIn");
-			    }
-			    
-			});
-			$(window).scroll(function() {
-				if ($(this).scrollTop() > 2000 && $(this).scrollTop() < 2450) {
-			    	
-			    	$('#proj1').removeClass("hidden").addClass("animated once flipInX");
-			    }
-			    else if ($(this).scrollTop() > 2800 || $(this).scrollTop() < 1800) {
-			    	
-			    	$('#proj1').removeClass("animated once flipInX").addClass("hidden");
-			    }
-			});
-			$(window).scroll(function() {
-				if ($(this).scrollTop() > 2050 && $(this).scrollTop() < 2450) {
-			    	
-			    	$('#proj2').removeClass("hidden").addClass("animated once flipInX");
-			    }
-			    else if ($(this).scrollTop() > 2800 || $(this).scrollTop() < 1800) {
-			    
-			    	$('#proj2').removeClass("animated once flipInX").addClass("hidden");
-			    }
-			});
-
-			$(window).scroll(function() {
-				if ($(this).scrollTop() > 2100 && $(this).scrollTop() < 2450) {
-		
-			    	$('#proj3').removeClass("hidden").addClass("animated once flipInX");
-			    }
-			    else if ($(this).scrollTop() > 2800 || $(this).scrollTop() < 1800) {
-			    	
-			    	$('#proj3').removeClass("animated once flipInX").addClass("hidden");
-			    }
-			});
-
-			$("#sum").click(function() {
-			    $('html, body').animate({
-			        scrollTop: $("#1").offset().top
-			    }, 2000);
-			});
-			$("#project").click(function() {
-			    $('html, body').animate({
-			        scrollTop: $("#2").offset().top
-			    }, 2000);
-			});
-			$("#contact").click(function() {
-			    $('html, body').animate({
-			        scrollTop: $("#3").offset().top
-			    }, 2000);
-			});
-			$(function(){
- 					$( "#drag" ).draggable();
- 				});
-			$(".rotate").textrotator({
-		        animation: "flip",
-		        separator: ",",
-		    speed: 2000
-		    });
-				
-		});
-	 	</script>
+	 	<script src="scripts/jquery.simple-text-rotator.js"></script> 
+	 	<script src="scripts/jquery.lazylinepainter-1.7.0.js"></script>
+	 	<script src="scripts/sig.js"></script>
+	 	<script src="scripts/write.js"></script>
+	 
+	 	<script src="scripts/jquery.js"></script>
 	 	
 	</head>
 
 	<body>
 
 		<nav id ="nav" class="z-depth-0">
-		<ul id="slide-out" class="side-nav">
-			<div class="circular"></div>
-			<h3 id="name">Eric Lee</h3>
-      		<li id="sum"><a href="#!">About Me</a></li>
-      		<li id="project"><a href="#!">Projects</a></li>
-      		<li id="contact"><a href="#!">Contact Information</a></li>
-    	</ul>
-    	<div id="drag">
-    		<a href="#" data-activates="slide-out" class="btn-floating btn-large red 	button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
-    		<canvas width=200></canvas>
-    	</div>
+			<ul id="slide-out" class="side-nav">
+				<div class="circular"></div>
+				<h3 id="name">Eric Lee</h3>
+	      		<li id="sum"><a href="#!">About Me</a></li>
+	      		<li id="project"><a href="#!">Projects</a></li>
+	      		<li id="contact"><a href="#!">Contact Information</a></li>
+	    	</ul>
+	    	<div id="drag">
+	    		<a href="#" data-activates="slide-out" class="btn-floating btn-large red 	button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+	    		<canvas width=200></canvas>
+	    	</div>
 		</nav>
 
+		
 
 		<div id="test1">
 			<h1 class="header" id="test">Eric Lee</h1>
@@ -152,10 +52,10 @@
 		    </div>
 		 </div>
 
-		<div id="1"class="section white">
+		<div id="one"class="section white">
 			<div class="row container">
 			    <h2 class="header">About Me</h2>
-			    <p class="grey-text text-darken-3 lighten-3">Hi, my name is Eric Lee. I am from Cupertino, California. I recently completed a 14 week intensive coding bootcamp called Coding Dojo. I am a highly motivated full stack web developer with the knowledge of three full stacks and currently pursuing a programming career in web development. Known for excellent work ethic and attention to detail. Key strengths include:</p>
+			    <p class="grey-text text-darken-3 lighten-3">Hi, my name is Eric Lee. I am from Cupertino, California. I recently completed a 14 week intensive coding bootcamp called Coding Dojo. I am a highly motivated full stack web developer with the knowledge of three full stacks and currently pursuing a programming career in web development. Known for excellent work ethic and attention to detail. My key strengths include:</p>
 			    <ul id="left">
 			    	<li>Organized</li>
 			    	<li>Goal Driven</li>
@@ -178,8 +78,6 @@
 				<img src="https://worldvectorlogo.com/logos/flask.svg" height="50px" width="30px">
 				<img src="http://logonoid.com/images/codeigniter-logo.jpg" height="50px" width="90px">
 				<img src="http://d1o4bwz7xyo9sy.cloudfront.net/sites/default/files/pictures/images/gpu_amazon_ec2_logo.png" height="60px" width="110px">
-				
-
 		    </div>
 		</div>
 
@@ -188,7 +86,7 @@
 		    	<img src="/static/images/2.jpg">
 		    </div>
 		</div>
-		<div id="2"class="section white">
+		<div id="two"class="section white">
 			<div class="row container">
 		      <h2 class="header">Projects</h2>
 		     
@@ -203,12 +101,14 @@
 		    	<img src="/static/images/3.jpg">
 		    </div>
 		</div>
+
 		<div id="3"class="section white">
 			<div class="row container">
 		      <h2 class="header">Contact Information</h2>
 		      <p class="grey-text text-darken-3 lighten-3">Email: E.Keith.Lee@gmail.com</p>
 		      <p class="grey-text text-darken-3 lighten-3">LinkedIn: <a href="https://www.linkedin.com/in/eric-lee-64592a87"><img id="linked" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png"></a></p>
 		      <p class="grey-text text-darken-3 lighten-3">GitHub: <a href="https://github.com/bombjester"><img id='git' src="http://image005.flaticon.com/25/svg/25/25231.svg"></a>
+		      	<div id="demo"></div>
 		    </div>
 		</div>
 
@@ -217,8 +117,5 @@
 		    	<img src="http://rack.3.mshcdn.com/media/ZgkyMDEzLzA0LzMwLzFlL2NvZGluZ2Z1dHVyLmQ1MzY5LmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw/9a2e4cfd/a4d/coding-future.jpg">  	
 		    </div>
 		</div>
-			
-		
-
 	</body>
 </html>
