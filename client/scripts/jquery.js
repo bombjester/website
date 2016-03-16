@@ -49,12 +49,12 @@ $(document).ready(function(){
 
 	$("#sum").click(function() {
 	    $('html, body').animate({
-	        scrollTop: $("#1").offset().top
+	        scrollTop: $("#one").offset().top
 	    }, 2000);
 	});
 	$("#project").click(function() {
 	    $('html, body').animate({
-	        scrollTop: $("#2").offset().top
+	        scrollTop: $("#two").offset().top
 	    }, 2000);
 	});
 	$("#contact").click(function() {
