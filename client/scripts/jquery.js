@@ -20,7 +20,7 @@ $(document).ready(function(){
 	    	
 	    	$('#proj1').removeClass("hidden").addClass("animated once flipInX");
 	    }
-	    else if ($(this).scrollTop() > 2800 || $(this).scrollTop() < 1800) {
+	    else if ($(this).scrollTop() > 2900 || $(this).scrollTop() < 1800) {
 	    	
 	    	$('#proj1').removeClass("animated once flipInX").addClass("hidden");
 	    }
@@ -30,7 +30,7 @@ $(document).ready(function(){
 	    	
 	    	$('#proj2').removeClass("hidden").addClass("animated once flipInX");
 	    }
-	    else if ($(this).scrollTop() > 2800 || $(this).scrollTop() < 1800) {
+	    else if ($(this).scrollTop() > 2900 || $(this).scrollTop() < 1800) {
 	    
 	    	$('#proj2').removeClass("animated once flipInX").addClass("hidden");
 	    }
@@ -41,7 +41,7 @@ $(document).ready(function(){
 
 	    	$('#proj3').removeClass("hidden").addClass("animated once flipInX");
 	    }
-	    else if ($(this).scrollTop() > 2800 || $(this).scrollTop() < 1800) {
+	    else if ($(this).scrollTop() > 2900 || $(this).scrollTop() < 1800) {
 	    	
 	    	$('#proj3').removeClass("animated once flipInX").addClass("hidden");
 	    }
