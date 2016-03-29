@@ -98,8 +98,11 @@ canvas{
 }
 
 #two{
-  height: 80vh;
+  height: 100vh;
 }
 #one{
   height: 90vh;
+}
+img{
+  display: inline-block;
 }

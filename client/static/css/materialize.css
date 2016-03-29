@@ -6649,7 +6649,7 @@ nav ul a span.badge {
 .container {
   margin: 0 auto;
   max-width: 1280px;
-  width: 90%;
+  width: 100%;
 }
 
 @media only screen and (min-width: 601px) {
@@ -6665,6 +6665,7 @@ nav ul a span.badge {
 }
 
 .container .row {
+  width: 100%;
   margin-left: -0.75rem;
   margin-right: -0.75rem;
 }
@@ -6687,6 +6688,7 @@ nav ul a span.badge {
 }
 
 .row {
+
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -7753,6 +7755,9 @@ small {
 }
 
 .card {
+  display: inline-block;
+  vertical-align: top;
+  width: 285px;
   position: relative;
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
