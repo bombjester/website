@@ -6,6 +6,7 @@ app.use(bodyParser.json());
 
 
 
+
 //require('./server/config/mongoose.js');
 //WE NEED TO REQUIRE MONGOOSE BEFORE THE ROUTES!
 //require('./server/config/routes.js')(app);

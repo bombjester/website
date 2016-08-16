@@ -47,6 +47,17 @@ $(document).ready(function(){
 	    }
 	});
 
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 2100 && $(this).scrollTop() < 2450) {
+
+	    	$('#proj4').removeClass("hidden").addClass("animated once flipInX");
+	    }
+	    else if ($(this).scrollTop() > 3400 || $(this).scrollTop() < 1800) {
+	    	
+	    	$('#proj4').removeClass("animated once flipInX").addClass("hidden");
+	    }
+	});
+
 	$("#sum").click(function() {
 	    $('html, body').animate({
 	        scrollTop: $("#one").offset().top
