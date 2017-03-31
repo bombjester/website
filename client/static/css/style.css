@@ -45,10 +45,8 @@ ul#cyclelist li {
     -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
     background: url(/static/images/me.jpg);
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    display: inline-block;
+    float: right;
     }
 li{
   text-align: center;
@@ -69,8 +67,9 @@ canvas{
   margin-bottom: -5px;
 }
 #left{
-
+  display:inline-block;
   text-indent: left;
+  padding-left: 40%;
 }
 .git{
   height: 20px;
@@ -97,7 +96,7 @@ canvas{
   height: 100vh;
 }
 #one{
-  height: 90vh;
+  height: 100vh;
 }
 img{
   display: inline-block;
@@ -106,6 +105,7 @@ img{
 #background{
   height: 100vh;
   background-image: url(/static/images/background.gif);
+
   float: top;
   padding-top: 20vh;
   background-size: cover;
@@ -114,4 +114,52 @@ img{
 .card{
   margin-top: 1%;
   margin-left: 2%;
+}
+
+.customnavbar{
+  background-color: white;
+  width: 100%;
+  height: 10vh;
+  z-index: 9;
+  position: fixed;
+  opacity: 1;
+  color: black;
+
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  transition: color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+  
+}
+
+.customnavbartop{
+  background-color: transparent;
+  width: 100%;
+  height: 10vh;
+  z-index: 9;
+  position: fixed;
+  opacity: 1;
+  color: white;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+
+}
+td{
+  float: right;
+  padding-top: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 100%;
+
+
+}
+
+
+#navleft{
+  float: left;
 }
