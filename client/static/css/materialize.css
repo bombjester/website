@@ -6648,7 +6648,6 @@ nav ul a span.badge {
 
 .container {
   margin: 0 auto;
-  max-width: 1280px;
   width: 100%;
 }
 
@@ -6673,6 +6672,7 @@ nav ul a span.badge {
 .section {
   padding-top: 1rem;
   padding-bottom: 1rem;
+
 }
 
 .section.no-pad {
