@@ -1,3 +1,7 @@
+body{
+  margin-top: -35px;
+}
+
 ul#cyclelist {
   width:200px;
   border:solid;
@@ -12,6 +16,7 @@ ul#cyclelist li {
   position:absolute;
 }
 #test{
+  padding-top: 25vh;
   text-align: center;
   font-size: 99px;
   float: bottom;
@@ -104,18 +109,23 @@ img{
 
 #background{
   height: 100vh;
-  background-image: url(/static/images/background.gif);
+  /*background-image: url(/static/images/background.gif);*/
 
   float: top;
-  padding-top: 20vh;
-  background-size: cover;
+ /* padding-top: 20vh;*/
+  /*background-size: cover;*/
 }
 
 .card{
   margin-top: 1%;
   margin-left: 2%;
 }
-
+#backgroundpic{
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .customnavbar{
   background-color: white;
   width: 100%;
@@ -162,4 +172,11 @@ td{
 
 #navleft{
   float: left;
+}
+.menubutton{
+  cursor:pointer;
+
+}
+.menubutton:hover{
+  color: #FFD700;  
 }
