@@ -180,3 +180,6 @@ td{
 .menubutton:hover{
   color: #FFD700;  
 }
+#special{
+  height: 90%;
+}
