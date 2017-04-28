@@ -65,12 +65,9 @@ canvas{
   width: 20px;
   margin-left: 20px;
   margin-bottom: -5px;
+   box-shadow: 3px 3px 1px #888888;
 }
-#linked:hover{
-  height: 25px;
-  width: 25px;
-  margin-left: 20px;
-  margin-bottom: -5px;
+
 }
 #left{
   display:inline-block;
@@ -82,13 +79,10 @@ canvas{
   width: 20px;
   margin-left: 30px;
   margin-bottom: -5px;
+   box-shadow: 3px 3px 1px #888888;
+
 }
-.git:hover{
-  height: 25px;
-  width: 25px;
-  margin-left: 30px;
-  margin-bottom: -5px;
-}
+
 .hidden{
   visibility: hidden;
 }
@@ -99,10 +93,10 @@ canvas{
 }
 
 #two{
-  height: 100vh;
+  height: 140vh;
 }
 #one{
-  height: 100vh;
+  height: 120vh;
 }
 img{
   display: inline-block;
@@ -185,6 +179,4 @@ table{
 .menubutton:hover{
   color: #FFD700;  
 }
-#special{
-  height: 90%;
-}
+
