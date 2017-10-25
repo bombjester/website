@@ -2798,7 +2798,7 @@ video.responsive-video {
 
   position: relative;
   overflow: hidden;
-  height: 500px;
+  height: 65vh;
 }
 
 .parallax {
@@ -7758,7 +7758,7 @@ small {
 .card {
   display: inline-block;
   vertical-align: top;
-  width: 285px;
+  width: 22%;
   position: relative;
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
@@ -10494,14 +10494,14 @@ select {
 }
 
 .carousel .carousel-item {
-  width: 175px;
+  width: 225px;
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .carousel .carousel-item img {
-  width: 100px;
+  width: 200px;
   height: 100px;
 }
 

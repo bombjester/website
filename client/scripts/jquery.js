@@ -81,17 +81,17 @@ $(document).ready(function(){
 	$("#sum").click(function() {
 		
 	    $('html, body').animate({
-	        scrollTop: $("#one").offset().top -65
+	        scrollTop: $("#one").offset().top
 	    }, 2000);
 	});
 	$("#project").click(function() {
 	    $('html, body').animate({
-	        scrollTop: $("#two").offset().top-65
+	        scrollTop: $("#two").offset().top
 	    }, 2000);
 	});
 	$("#contact").click(function() {
 	    $('html, body').animate({
-	        scrollTop: $("#3").offset().top-65
+	        scrollTop: $("#three").offset().top
 	    }, 2000);
 	});
 	$(function(){
