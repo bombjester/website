@@ -8,6 +8,8 @@ body{
   color: white;
   width: 60%;
   height: 90%;
+  position: fixed;
+  
 }
 ul#cyclelist {
   width:200px;
@@ -26,15 +28,19 @@ ul#cyclelist li {
   padding-top: 25vh;
   text-align: center;
   font-size: 99px;
+ 
   float: bottom;
+
 }
 #name{
   color: black;
   text-align: center;
 }
 #sub{
+
   text-align: center;
   font-size: 40px;
+ 
 }
 
 #test2{
@@ -53,13 +59,18 @@ ul#cyclelist li {
 .circular {
     width: 200px;
     height: 200px;
-    border-radius: 150px;
-    -webkit-border-radius: 150px;
-    -moz-border-radius: 150px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
     background: url(/static/images/me.jpg);
     display: inline-block;
     float: right;
-    }
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     z-index: -2;
+}
+   
+}
+
 li{
   text-align: center;
 }
@@ -76,6 +87,7 @@ canvas{
 #three{
   padding-top: 4%;
   height: 70vh;
+  z-index: 40;
 }
 
 }
@@ -92,7 +104,12 @@ canvas{
    box-shadow: 3px 2px 3px #888888;
 
 }
+.opacity{
+  opacity: 0;
+  z-index: -999;
+  
 
+}
 .hidden{
   visibility: hidden;
 }
@@ -104,7 +121,12 @@ canvas{
 
 #two{
   padding-top: 3%;
-  height: 180vh;
+  height: 140vh;
+}
+@media only screen and (max-width: 1400px) {
+    #two {
+        height: 190vh;
+    }
 }
 #one{
   padding-top: 5%;
@@ -118,9 +140,16 @@ img{
 
 #background{
   height: 105vh;
-  /*background-image: url(/static/images/background.gif);*/
-
+  background-image: url(https://wallpaperscraft.com/image/laptop_cup_glasses_plant_114948_2938x1953.jpg);
+ 
   float: top;
+
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
  /* padding-top: 20vh;*/
   /*background-size: cover;*/
 }
@@ -130,6 +159,7 @@ img{
   margin-left: 2%;
 }
 #backgroundpic{
+
   z-index: -1;
   position: absolute;
   width: 100%;
@@ -144,7 +174,7 @@ img{
   position: fixed;
   opacity: 1;
   color: black;
-
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
