@@ -23,7 +23,7 @@ $(document).ready(function(){
 
 
 	    if ($(this).scrollTop() > 800) {
-	        $('#left').removeClass("hidden").addClass("animated once rollIn");
+	        //$('#left').removeClass("hidden").addClass("animated flipInX");
 	    }
 	    // if ($(this).scrollTop() > 2000 && $(this).scrollTop() < 2450) {
 	    	
